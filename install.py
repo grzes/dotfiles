@@ -9,7 +9,7 @@ from optparse import OptionParser
 re_dot = re.compile(r'^\.[^\.]+$')
 
 HOME = os.environ["HOME"]
-
+IGNORE = ['.git', '.gitmodules']
 
 def file_hash(f):
     return hashlib.md5(open(f).read()).hexdigest()
@@ -30,7 +30,7 @@ if __name__ == '__main__':
 
     d = os.path.dirname(os.path.abspath(__file__))
     for f in os.listdir(d):
-        if re_dot.match(f) and f != ".git":
+        if re_dot.match(f) and f not in IGNORE:
             new_f = os.path.join(d, f)
             old_f = os.path.join(HOME, f)
             print "[%s]" % old_f
