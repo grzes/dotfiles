@@ -12,7 +12,7 @@ HOME = os.environ["HOME"]
 IGNORE = ['.git', '.gitmodules']
 
 def file_hash(f):
-    return hashlib.md5(open(f).read()).hexdigest()
+    return "D" if os.path.isdir(f) else hashlib.md5(open(f).read()).hexdigest()
 
 if __name__ == '__main__':
     parser = OptionParser()
