@@ -1,0 +1,15 @@
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	ui = auto
+	sh = auto
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+[user]
+	name = Grzes Furga
+	email = grzesiof@gmail.com
+[merge]
+	tool = meld
