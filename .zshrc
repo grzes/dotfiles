@@ -27,11 +27,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-
-# override git plugin gl, for a short log
-alias gl='git --no-pager log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative'
-compdef _git gl=git-log
-
 # virtualenv manager
 export WORKON_HOME=~/envs
 
@@ -40,3 +35,7 @@ export TERM="xterm-256color"
 
 # gvim alias for single window mode
 alias gvim="gvim --remote-tab-silent"
+
+# path
+export PATH="$PATH:$HOME/code/google_appengine"
+
